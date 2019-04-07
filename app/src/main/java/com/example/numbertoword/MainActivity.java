@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         int first;
         Ones one = new Ones();
-        Tens ten = new Tens();
+        Convert ten = new Convert();
 
 
         if (validate()) {
@@ -47,16 +47,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 first = Integer.parseInt(etNumber.getText().toString());
                 if (first * 8 == 0) {
                     tvResult.setText("Zero");
+                    etNumber.setText("");
                 } else {
-                    if (first / 10 == 0) {
-                        one.setOne(first);
-                        tvResult.setText(one.getOne());
-                    } else if (first / 10 >= 1 && first / 10 < 10) {
-                        ten.setTens(first);
-                        tvResult.setText(ten.getTens());
-                    } else if (first / 100 >= 1) {
-
-                    }
+                        ten.setInteger(first);
+                        tvResult.setText(ten.getInteger());
+                    etNumber.setText("");
+//                    }
                 }
             }
         }

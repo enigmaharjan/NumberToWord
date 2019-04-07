@@ -1,15 +1,60 @@
 package com.example.numbertoword;
 
-public class Tens {
-    private String tens, one;
+public class Convert {
+    private String hundred, tens, one;
 
-    public String getTens(){
-        return tens + one;
+    public String getInteger(){
+        return hundred + tens + one;
     }
 
-    public void setTens(int ten) {
+    public void setInteger(int ten) {
+        hundred = "";
         tens = "";
         one = "";
+
+        if (ten / 100 >= 0) {
+            int div = ten / 100;
+            switch (div) {
+                case 1:
+                    this.hundred = "One hundred ";
+                    ten = ten - 100;
+                    break;
+                case 2:
+                    this.hundred = "Two Hundred ";
+                    ten = ten - 200;
+                    break;
+                case 3:
+                    this.hundred = "Three Hundred ";
+                    ten = ten - 300;
+                    break;
+                case 4:
+                    this.hundred = "Four Hundred ";
+                    ten = ten - 400;
+                    break;
+                case 5:
+                    this.hundred = "Fiv Hundred ";
+                    ten = ten - 500;
+                    break;
+                case 6:
+                    this.hundred = "Six Hundred ";
+                    ten = ten - 600;
+                    break;
+                case 7:
+                    this.hundred = "Seven Hundred ";
+                    ten = ten - 700;
+                    break;
+                case 8:
+                    this.hundred = "Eight Hundred ";
+                    ten = ten - 800;
+                    break;
+                case 9:
+                    this.hundred = "Nine Hundred ";
+                    ten = ten - 900;
+                    break;
+            }
+
+        }
+
         if (ten >= 10 && ten < 20) {
 
             switch (ten){
@@ -49,70 +94,65 @@ public class Tens {
                 int modu = ten % 10;
                 switch (modu) {
                     case 1:
-                        this.one = " One";
+                        this.one = "One";
                         break;
                     case 2:
-                        this.one = " Two";
+                        this.one = "Two";
                         break;
                     case 3:
-                        this.one = " Three";
+                        this.one = "Three";
                         break;
                     case 4:
-                        this.one = " Four";
+                        this.one = "Four";
                         break;
                     case 5:
-                        this.one = " Five";
+                        this.one = "Five";
                         break;
                     case 6:
-                        this.one = " Six";
+                        this.one = "Six";
                         break;
                     case 7:
-                        this.one = " Seven";
+                        this.one = "Seven";
                         break;
                     case 8:
-                        this.one = " Eight";
+                        this.one = "Eight";
                         break;
                     case 9:
-                        this.one = " Nine";
-                        break;
-                    case 0:
-                        this.one = "asd";
+                        this.one = "Nine";
                         break;
                 }
             }
             if (ten / 10 >= 0) {
                 int div = ten / 10;
                 switch (div) {
-                    case 1:
-                        this.tens = "";
-                        break;
                     case 2:
-                        this.tens = "Twenty";
+                        this.tens = "Twenty ";
                         break;
                     case 3:
-                        this.tens = "Thirty";
+                        this.tens = "Thirty ";
                         break;
                     case 4:
-                        this.tens = "Fourty";
+                        this.tens = "Fourty ";
                         break;
                     case 5:
-                        this.tens = "Fivty";
+                        this.tens = "Fivty ";
                         break;
                     case 6:
-                        this.tens = "Sixty";
+                        this.tens = "Sixty ";
                         break;
                     case 7:
-                        this.tens = "Seventy";
+                        this.tens = "Seventy ";
                         break;
                     case 8:
-                        this.tens = "Eighty";
+                        this.tens = "Eighty ";
                         break;
                     case 9:
-                        this.tens = "Ninety";
+                        this.tens = "Ninety ";
                         break;
                 }
 
             }
+
         }
     }
 
