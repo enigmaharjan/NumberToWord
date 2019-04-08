@@ -5,22 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/num">
 
     <EditText
         android:id="@+id/etNumber"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:maxLength="3"/>
+        android:maxLength="3"
+        android:hint="Please Enter Any Number"
+        android:textColor="#F35F5F"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
     <Button
         android:id="@+id/btnConvert"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert"/>
+        android:text="Convert"
+        android:layout_gravity="center"
+        android:background="#BFF785"
+        android:inputType="none"/>
     <TextView
         android:id="@+id/tvWord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textColor="#03A9F4"
+        android:layout_gravity="center"
+        android:textSize="30sp"/>
 
 </LinearLayout>
